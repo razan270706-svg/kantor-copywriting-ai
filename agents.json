@@ -1,0 +1,123 @@
+{
+  "name": "Kantor Copywriting AI",
+  "tagline": "Tim copywriter AI yang menulis headline, caption, dan iklan untuk brand Anda.",
+  "tower": "MENARA KATA",
+  "dash": "Copywriting Studio",
+  "owner": "Klien",
+  "namePrefix": "Agent ",
+  "idPrefix": "",
+  "bossRoom": "Ruang Redaksi",
+  "brand": "Kantor Copywriting AI",
+  "placeholder": "Tulis brief, mis. caption IG promo beasiswa atau headline iklan Meta",
+  "firstTasks": [
+    "Status brief hari ini?",
+    "Buat 5 headline iklan beasiswa"
+  ],
+  "dailyLabel": "rekap brief dan naskah harian",
+  "simModel": "claude-sonnet-5-5",
+  "menu": ["Kopi susu", "Teh tarik", "Kurma", "Air mineral"],
+  "shalat": true,
+  "prayers": [["Subuh","04:35"],["Dzuhur","11:55"],["Ashar","15:15"],["Maghrib","17:55"],["Isya","19:05"]],
+  "agents": [
+    {
+      "id": "redaksi", "nm": "Agent Redaksi", "sh": "Redaksi",
+      "rl": "Kepala redaksi: menerima brief dan membagi tugas",
+      "gender": "L", "slot": "kepala", "boss": true,
+      "shirt": "#2F4A6B", "hair": "peci", "skin": "#C99A73",
+      "tools": ["message"],
+      "samples": ["Status brief hari ini?", "Susun kalender konten minggu ini"]
+    },
+    {
+      "id": "iklan", "nm": "Agent Iklan", "sh": "Iklan",
+      "rl": "Headline, iklan Meta/Google, dan CTA",
+      "gender": "L", "slot": "kerja-1",
+      "shirt": "#8C3B3B", "hair": "short", "skin": "#D9A983",
+      "k": ["iklan","headline","ads","cta","promo","slogan","tagline"],
+      "samples": ["5 headline iklan Meta untuk webinar", "CTA tombol pendaftaran"]
+    },
+    {
+      "id": "konten", "nm": "Agent Konten", "sh": "Konten",
+      "rl": "Artikel, blog, newsletter, dan email",
+      "gender": "P", "slot": "kerja-2",
+      "shirt": "#3E7A57", "hair": "hijab", "hijab": "#2D8C84", "skin": "#E0B48F",
+      "k": ["artikel","blog","email","newsletter","landing","press","rilis","naskah"],
+      "samples": ["Draf artikel blog soal produk baru", "Email blast penawaran"]
+    },
+    {
+      "id": "sosmed", "nm": "Agent Sosmed", "sh": "Sosmed",
+      "rl": "Caption, hook, thread, dan skrip video pendek",
+      "gender": "P", "slot": "kerja-3",
+      "shirt": "#B5653A", "hair": "hijab", "hijab": "#C9B08A", "skin": "#DDAE86",
+      "k": ["caption","instagram","tiktok","reels","thread","linkedin","hook","hashtag"],
+      "samples": ["Caption IG peluncuran program", "Skrip Reels 30 detik"]
+    },
+    {
+      "id": "editor", "nm": "Agent Editor", "sh": "Editor",
+      "rl": "Menyunting tata bahasa, gaya, dan tone brand",
+      "gender": "L", "slot": "kerja-4",
+      "shirt": "#5B6470", "hair": "messy", "glasses": true, "skin": "#C08C66",
+      "k": ["edit","revisi","koreksi","tata","bahasa","tone","gaya","proofread"],
+      "samples": ["Rapikan naskah brosur", "Cek konsistensi tone brand"]
+    },
+    {
+      "id": "riset", "nm": "Agent Riset", "sh": "Riset",
+      "rl": "Riset audiens, kompetitor, dan tren",
+      "gender": "L", "slot": "pustaka",
+      "shirt": "#6D4C8C", "hair": "short", "glasses": true, "skin": "#DDAE86",
+      "tools": ["pdf"],
+      "k": ["riset","audiens","kompetitor","tren","persona","survei"],
+      "samples": ["Riset kompetitor kampus sejenis", "Persona calon mahasiswa"]
+    },
+    {
+      "id": "seo", "nm": "Agent SEO", "sh": "SEO",
+      "rl": "Kata kunci, judul SEO, dan meta deskripsi",
+      "gender": "L", "slot": "server",
+      "shirt": "#D9822B", "hair": "short", "skin": "#C99A73",
+      "tools": ["web_fetch"],
+      "k": ["seo","keyword","meta","ranking","google","trafik"],
+      "samples": ["Riset kata kunci untuk blog", "Tulis meta deskripsi 10 halaman"]
+    },
+    {
+      "id": "jadwal", "nm": "Agent Jadwal", "sh": "Jadwal",
+      "rl": "Kalender konten, tenggat, dan pengingat",
+      "gender": "L", "slot": "kajian",
+      "shirt": "#E9EEF0", "hair": "pecip", "skin": "#C99A73",
+      "tools": ["web_fetch"], "cron": true,
+      "k": ["jadwal","kalender","tenggat","deadline","agenda","pengingat"],
+      "samples": ["Cek tenggat naskah minggu ini", "Ingatkan jadwal posting"]
+    }
+  ],
+  "jobs": [
+    {
+      "id": "desainer", "nm": "Agent Desainer", "sh": "Desainer",
+      "rl": "Visual pendamping naskah",
+      "gender": "L", "plot": "timur", "roomSign": "Studio Visual",
+      "shirt": "#1E6E62", "hair": "short", "skin": "#D2A27C", "glasses": true,
+      "k": ["desain","poster","banner","visual","thumbnail"],
+      "covers": ["Poster","Banner","Feed IG","Thumbnail","Slide","Brosur"],
+      "coverBrand": "KATA",
+      "duties": ["Membuat draf visual untuk naskah iklan","Menyiapkan feed media sosial","Menjaga konsistensi warna brand"],
+      "skills": ["desain visual","teliti","paham brand"],
+      "samples": ["Draf poster webinar", "Thumbnail video minggu ini"]
+    }
+  ],
+  "candidates": [
+    { "id": "voiceover", "nm": "Agent Naskah Video", "rl": "Skrip video, podcast, dan voice over" }
+  ],
+  "talks": [
+    ["Brief klien pagi ini sudah masuk?", "Sudah, tiga brief baru", "Siap, bagi ke tim"],
+    ["Headline ini terlalu panjang", "Saya pangkas jadi enam kata", "Lebih tajam, sip"],
+    ["Tone brand-nya formal atau santai?", "Santai tapi tetap sopan", "Noted, saya sesuaikan"],
+    ["Hook caption tadi kurang nendang", "Coba mulai dari pertanyaan", "Boleh, saya revisi"],
+    ["Lanjut nulis?", "Bentar, kopinya belum habis", "Haha, oke"],
+    ["Sudah dzikir pagi?", "Alhamdulillah sudah", "Barakallahu fiik"],
+    ["Kata kunci minggu ini apa?", "Beasiswa dan kuliah daring", "Saya masukkan ke judul"],
+    ["Kopi pantry makin enak ya", "Biji baru katanya", "Pantas ramai"]
+  ],
+  "holoTalks": [
+    ["Tampilkan peta kalender konten", "Klaster merah itu tenggat minggu ini", "Prioritaskan dulu"],
+    ["Proyeksi jumlah brief bulan depan?", "Grafiknya naik", "Perlu agent penulis tambahan"],
+    ["Zoom ke alur brief", "Redaksi ke Riset, lalu Penulis, lalu Editor", "Alurnya rapi"],
+    ["Simulasikan lonjakan brief", "Antrean dibagi otomatis", "Bagus, tangguh"]
+  ]
+}
